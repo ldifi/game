@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Платформер</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="hud">
+      <div class="hud__stats">
+        <span id="scoreLabel">Очки: 0</span>
+        <span id="levelLabel">Уровень: 1</span>
+        <span id="healthLabel">Здоровье: 3</span>
+        <span id="bestLabel">Рекорд: 0</span>
+      </div>
+      <div class="hud__controls">
+        <button id="startBtn">Старт</button>
+        <button id="pauseBtn">Пауза</button>
+        <button id="restartBtn">Рестарт</button>
+      </div>
+    </header>
+
+    <main class="game-wrapper">
+      <canvas id="gameCanvas" width="960" height="540" aria-label="Игровое поле"></canvas>
+    </main>
+
+    <section class="instructions">
+      <article class="instructions__card">
+        <h2>Управление</h2>
+        <ul>
+          <li>A / ← — движение влево</li>
+          <li>D / → — движение вправо</li>
+          <li>W / ↑ / Space — прыжок</li>
+          <li>Esc — быстро поставить игру на паузу</li>
+        </ul>
+      </article>
+
+      <article class="instructions__card">
+        <h2>Задача</h2>
+        <p>Соберите все светящиеся сферы, избегайте врагов и пропастей, активируйте портал.</p>
+        <p>Ищите записки на уровнях - они содержат важную информацию о сюжете и подсказки.</p>
+        <p>Каждый уровень сложнее предыдущего: больше движущихся платформ и агрессивных противников.</p>
+      </article>
+
+      <article class="legend">
+        <h3>Легенда</h3>
+        <div class="legend__items">
+          <div class="legend__item">
+            <span class="legend__chip legend__chip--platform"></span>
+            <span>Стационарная платформа</span>
+          </div>
+          <div class="legend__item">
+            <span class="legend__chip legend__chip--moving"></span>
+            <span>Подвижная платформа</span>
+          </div>
+          <div class="legend__item">
+            <span class="legend__chip legend__chip--enemy"></span>
+            <span>Патрульный враг</span>
+          </div>
+          <div class="legend__item">
+            <span class="legend__chip" style="background: linear-gradient(135deg, #fff9e6, #d4c5a9);"></span>
+            <span>Записка с сюжетом</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.4/howler.min.js" integrity="sha512-xi/RZRIF/S0hJ+yJJYuZ5yk6/8pCiRlEXZzoguSMl+vk2i3m6UjUO/WcZ11blRL/O+rnj94JRGwt/CHbc9+6EA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
+
